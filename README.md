@@ -5,9 +5,9 @@ During my internship as part of AI team in [FootFallcam](https://www.footfallcam
 
 # Background
 A depth map is a crucial aspect for the company as depth map conditions will greatly affect the result of human tracking. As a result, I was asked to create a scoring model
-to help the company filter out some of the "issue" devices.
+to help the company filter out some of the "issue" devices. 
 
-# My approach 1
+# Approach 1
 1. Extract live view images, depth maps, and tracking zone coordinates from the company system with C++ programming language
 2. Manually annotate the height object in live view with Label studio
 3. Take the mask as the ground truth 
@@ -16,7 +16,7 @@ to help the company filter out some of the "issue" devices.
    - The real depth map has a gradient while the generated ground truth has only black and white
    - SSIM is proven to have a lesser emphasis on color brightness while taking into consideration of luminance, contrast, and structure
 
-# My approach 2
+# Approach 2
 1. Since approach 1 has no standard for the ground truth, it may lead to unreliable evaluation
 2. Approach 2 is just edge detection with fine tuning so the on floor object will have lesser impact to the final evaluation.
 3. This is a tradeoff as I take "ground truth standardization" as my top priority
